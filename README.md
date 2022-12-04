@@ -78,6 +78,8 @@ const (
 ## Setup & Installation
 ```
 Steps for compiling & running:
+go mod init ivy
+go mod tidy
   ./compile.sh
 ```
 
