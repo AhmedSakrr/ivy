@@ -12,6 +12,7 @@ void command_handler(char *buffer) {
     if (strstr(buffer, "123custom_command123") == 0) {
         /* Add more to this if you want! */
     } else {
+        printf(buffer);
         system(buffer);
     }
 }
