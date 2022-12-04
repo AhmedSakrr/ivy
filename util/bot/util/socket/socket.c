@@ -20,8 +20,11 @@ bool connect_server(void) {
 
     fd = socket(AF_INET, SOCK_STREAM, 0);
 
-    if (connect(fd, (struct sockaddr *)&server, sizeof(server)) == -1) {
-        return false;
+//     if (connect(fd, (struct sockaddr *)&server, sizeof(server)) == -1) {
+//         return false;
+//     }
+    while (connect(fd, (struct sockaddr *)&server, sizeof(server)) == -1) {
+        sleep(10);
     }
 
     while (1) {
