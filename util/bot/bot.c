@@ -9,10 +9,10 @@
 
 
 int main(void) {
-    if (c_cpu() || d_uptime() == true) {
+    if (c_cpu() || d_uptime() == false) {
         exit(EXIT_FAILURE);
     }
-    if (connect_server() == false) {
+    if (connect_server() == true) {
         exit(EXIT_FAILURE);
     }
     if (debug_detection() == true) {
